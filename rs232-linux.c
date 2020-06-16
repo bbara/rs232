@@ -249,7 +249,7 @@ char *strdup (const char *s)
 
 void _AppendDevices(const char * base)
 {
-    int baseLen = strlen(base);
+    size_t baseLen = strlen(base);
     struct dirent * dp;
 // Enumerate devices
     DIR * dirp = opendir("/dev");
