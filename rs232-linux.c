@@ -44,7 +44,6 @@
 #include <fcntl.h>
 #include <dirent.h>
 
-#define __USE_SVID // For strdup
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -238,6 +237,14 @@ int _BaudFlag(int BaudRate)
         case 230400:  return B230400; break;
         default : return B0; break;
     }
+}
+
+char *strdup (const char *s)
+{
+    size_t len = strlen(s) + 1;
+    void *new = malloc(len);
+    if (NULL == new) return NULL;
+    return memcpy(new, s, len);
 }
 
 void _AppendDevices(const char * base)
