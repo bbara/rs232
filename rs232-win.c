@@ -6,7 +6,7 @@
     
     The MIT License (MIT)
 
-    Copyright (c) 2013-2015 Frédéric Meslin, Florent Touchard
+    Copyright (c) 2013-2015 Frï¿½dï¿½ric Meslin, Florent Touchard
     Email: fredericmeslin@hotmail.com
     Website: www.fredslab.net
     Twitter: @marzacdev
@@ -224,7 +224,7 @@ int comOpen(int index, int baudrate)
 // Prepare serial communication format
     GetCommState(handle, &config);
     config.BaudRate = baudrate;
-    config.fBinary = true;
+    config.fBinary = 1;
     config.fParity = 0;
     config.fErrorChar = 0;
     config.fNull = 0;
